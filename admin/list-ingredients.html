@@ -1,0 +1,93 @@
+<?PHP 
+    include('../includes/session.php');
+?>
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza Ingredients List - GrandmasPizza Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="ui/css/admin.css" />
+
+</head>
+
+
+<body>
+
+    <div id="header" class="page-header">
+        <a href="frontPage.php" class="logo-home">
+            <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza" />
+        </a>
+        
+        <h1>Grandmas Pizza Administration</h1>
+
+        <div class="navbar">
+            <ul class="nav">
+                <li class="right"><a href="../" target="_blank">View Live Site</a></li>
+                <li class="active"><a href="list-pizzas.html">Pizzas</a>
+                    <ul class="subnav">
+                        <li><a href="list-categories.html">Categories</a></li>
+                        <li class="active"><a href="list-ingredients.html">Ingredients</a></li>
+                        <li><a href="list-sizes.html">Sizes</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.php?action=manageotherfood">Other Food</a></li>
+                <li><a href="index.php?action=managedrinks">Drinks</a></li>
+                <li><a href="imagelibrary.php?type=relprod">Image Library</a></li>
+            </ul>
+        </div>
+
+    </div><!-- /.page-header -->
+
+
+    <div class="page-body">
+
+        
+        <h2>Pizza Ingredients</h2>
+
+
+        <ul class="items-list clearfix">
+            <li>
+                <h3>Pineapple</h3>
+
+                <div class="actions">
+                    <a class="button icon delete" href="delete-ingredient.html?i_id=1">Delete</a>
+                    <a class="button icon edit" href="edit-ingredient.html?i_id=1">Edit</a>
+                </div>
+            </li>
+
+            <li>
+                <h3>Cheese</h3>
+
+                <div class="actions">
+                    <a class="button icon delete" href="delete-ingredient.html?i_id=2">Delete</a>
+                    <a class="button icon edit" href="edit-ingredient.html?i_id=2">Edit</a>
+                </div>
+            </li>
+
+            <li>
+                <h3>Mushrooms</h3>
+
+                <div class="actions">
+                    <a class="button icon delete" href="delete-ingredient.html?i_id=3">Delete</a>
+                    <a class="button icon edit" href="edit-ingredient.html?i_id=3">Edit</a>
+                </div>
+            </li>
+        </ul>
+
+
+        <form class="admin-form" method="post" action="index.php?addingredient">
+            <input type="hidden" name="action" value="doaddingredient" /><!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
+
+            <input type="text" id="ingredient-name" name="ingredient-name" />
+            <button type="submit" class="button add" title="Add ingredient">Add new Pizza ingredient</button>
+        </form>
+
+    </div><!-- /.page-body -->
+
+
+</body>
+</html>
+

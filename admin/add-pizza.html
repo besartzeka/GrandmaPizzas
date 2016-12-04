@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add pizza - GrandmasPizza Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="ui/css/admin.css" />
+
+</head>
+
+
+<body>
+
+    <div id="header" class="page-header">
+        <a href="frontPage.php" class="logo-home">
+            <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza" />
+        </a>
+        
+        <h1>Grandmas Pizza Administration</h1>
+
+
+        <div class="navbar">
+            <ul class="nav">
+                <li class="right"><a href="../" target="_blank">View Live Site</a></li>
+
+                <li class="active"><a href="list-pizzas.html">Pizzas</a>
+                    <ul class="subnav">
+                        <li><a href="list-categories.html">Categories</a></li>
+                        <li><a href="list-ingredients.html">Ingredients</a></li>
+                        <li><a href="list-sizes.html">Sizes</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.php?action=manageotherfood">Other Food</a></li>
+                <li><a href="index.php?action=managedrinks">Drinks</a></li>
+                <li><a href="imagelibrary.php?type=relprod">Image Library</a></li>
+            </ul>
+        </div>
+
+    </div><!-- /.page-header -->
+
+
+
+    <div class="page-body">
+        
+        <h2>Add Pizza</h2>
+
+        <form class="admin-form" method="post" action="index.php" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="doaddpizza" /><!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
+
+            <fieldset>
+                <legend>Details</legend>
+
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" />
+                    </li>
+                    <li>
+                        <label for="description">Description:<br /></label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                    </li>
+                    <li>
+                        <label for="new-image">Photo:</label>
+                        <input type="file" id="new-image" name="new-image" />
+                    </li>
+                    <li>
+                        <label for="category">Category:</label>
+                        <select name="category" id="category">
+                            <option value="1">Veggie Pizza</option>
+                            <option value="2">Normal Pizza</option>
+                            <option value="3">Customized Pizza</option>
+                            <option value="4">Drinks</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="ingredients">Ingredients</label>
+                        <select name="ingredients" id="ingredients" multiple>
+                            <option value="1">Pineapple</option>
+                            <option value="2">Cheese</option>
+                            <option value="3">Tomato</option>
+                            <option value="4">Mushrooms</option>
+                        </select>
+                        <span class="form-help">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</span>
+                    </li>
+                </ul>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Prices</legend>
+
+                <ul>
+                    <li>
+                        <label for="price-small">Small:</label>
+                        <input type="text" id="price-small" name="price-small" />
+                    </li>
+                    <li>
+                        <label for="price-medium">Medium:</label>
+                        <input type="text" id="price-medium" name="price-medium" />
+                    </li>
+                    <li>
+                        <label for="price-large">Large:</label>
+                        <input type="text" id="price-large" name="price-large" />
+                    </li>
+                </ul>
+            </fieldset>
+
+
+            <div class="buttons">
+                <button type="submit" class="button icon go" title="Submit">Submit</button>
+                <a class="button icon cancel" title="Cancel" href="list-pizzas.html">Cancel</a>
+            </div>
+
+        </form>
+
+
+
+    </div><!-- /.page-body -->
+
+</body>
+</html>
+
