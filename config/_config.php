@@ -14,9 +14,9 @@ if (preg_match("/online-presence/", $_SERVER['HTTP_HOST'])) {
     define ("ADMIN_URL", BASE_URL . "admin/");
 
     $DATABASE_HOST = "mysql.online-presence.com";
-    $DATABASE_USER = "myhedin";
-    $DATABASE_PASSWORD = "xyz";
-    $DATABASE_NAME = "grandmaspizza";
+    $DATABASE_USER = "";
+    $DATABASE_PASSWORD = "";
+    $DATABASE_NAME = "";
 
     define ("SITE_TYPE", "live");
   
